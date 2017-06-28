@@ -17,11 +17,11 @@ __fastcall TFormMain::TFormMain(TComponent* Owner) : TForm(Owner)
 // ---------------------------------------------------------------------------
 void __fastcall TFormMain::FormShow(TObject *Sender)
 {
+    int contatore = 0;
     for (int kk = 0; kk < 100; ++kk)
     {
-        Sleep(100);
+        contatore++;
     }
-
 
     UnicodeString iniName = Application->ExeName;
     iniName = ChangeFileExt(iniName, L".ini");
@@ -41,7 +41,6 @@ void __fastcall TFormMain::FormShow(TObject *Sender)
     {
         iniSection = Format(L"Section%2.0d", ARRAYOFCONST((kk)));
         GetPrivateProfileString(iniSection.c_str(), iniKeyName.c_str(), L"yes", bf, sizeof(bf), iniName.c_str());
-        Sleep(100);
     }
 }
 
