@@ -1,6 +1,8 @@
 # CLangError
 Error debug breakpoint on Embarcadero Rad Studio XE 10 and CLang compiler
 
+--> Issue resolved with the Release RAD Studio Embarcadero 10.2.1
+
 
 See the breakpoint.
 
